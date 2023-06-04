@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <main className="bg-white px-10 ">
-        <section className="min-h-screen">
-          <nav className="py-6 mb-4 flex justify-between ">
+        <section className="h-screen">
+          <nav className="py-6 mb-2 flex justify-between ">
             <h1 className="text-2xl font-medium">Pawsome</h1>
             <ul>
               <li>
@@ -34,7 +34,7 @@ export default function Home() {
             <AiFillYoutube />
             <AiFillInstagram />
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 pl-12 pt-10 mt-10 ">
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 pl-12 pt-10 mt-6 ">
             <Image src={cat} />
           </div>
         </section>
