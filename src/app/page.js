@@ -1,5 +1,6 @@
 "use client";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import Nav from "./components/nav";
+import { useSelector } from "react-redux";
 import {
   AiFillTwitterCircle,
   AiFillYoutube,
@@ -10,25 +11,14 @@ import cat from "../../public/images/image.png";
 import dog from "../../public/images/dog.png";
 import rabbit from "../../public/images/rabbit.png";
 import elephant from "../../public/images/elephant.png";
-import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const darkMode = useSelector((state) => state.darkMode);
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white px-10 pb-4 dark:bg-gray-900 md:px-20 lg:px-40">
         <section>
-          <nav className="py-6 mb-2 flex justify-between dark:text-white">
-            <h1 className="text-2xl font-medium">Pawsome</h1>
-            <ul>
-              <li>
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl"
-                />
-              </li>
-            </ul>
-          </nav>
+          <Nav />
           <div className="text-center p-6 pt-1 ">
             <h2 className="text-4xl py-2 mb-2 text-teal-600 font-medium dark:text-teal-300 md:text-6xl">
               Happy Havens
