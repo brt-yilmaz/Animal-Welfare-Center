@@ -8,12 +8,12 @@ import { useSelector } from "react-redux";
 export default function Home() {
   const darkMode = useSelector((state) => state.darkMode);
   return (
-    <main className="bg-white px-10 pb-4 dark:bg-gray-900 md:px-20 lg:px-40">
-      <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? "dark" : ""}>
+      <main className="bg-white px-10 pb-4 dark:bg-gray-900 md:px-20 lg:px-40">
         <LandingPage />
         <Description />
         <CardWrapper />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
